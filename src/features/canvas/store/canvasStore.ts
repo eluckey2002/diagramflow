@@ -19,14 +19,14 @@ const initialState: CanvasState = {
   isZooming: false,
 }
 
-export const useCanvasStore = create<CanvasStore>((set) => ({
+export const useCanvasStore = create<CanvasStore>(set => ({
   ...initialState,
 
   // Actions
-  setZoom: (zoom) => set({ zoom }),
-  setPan: (pan) => set({ pan }),
-  setSelectedIds: (selectedIds) => set({ selectedIds }),
-  setDragging: (isDragging) => set({ isDragging }),
-  setZooming: (isZooming) => set({ isZooming }),
+  setZoom: zoom => set({ zoom }),
+  setPan: pan => set({ pan }),
+  setSelectedIds: selectedIds => set({ selectedIds }),
+  setDragging: isDragging => set({ isDragging }),
+  setZooming: isZooming => set({ isZooming }),
   reset: () => set(initialState),
 }))
